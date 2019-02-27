@@ -1,0 +1,5 @@
+{
+  "main.css": "/static/css/main.dev.css",
+  "main.js": "/static/js/main.dev.js",
+  "vendors.js": "/static/js/vendors.dev.js"
+}

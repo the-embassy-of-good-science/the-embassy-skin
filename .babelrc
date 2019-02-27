@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage"
+      }
+    ]
+  ],
+  "plugins": ["transform-class-properties"],
+  "env": {
+    "development": {
+      "presets": []
+    },
+    "production": {
+      "presets": []
+    }
+  }
+}
