@@ -20,15 +20,15 @@
     "skins.theembassy": {
       "class": "ResourceLoaderSkinModule",
       "styles": {
-        "static/css/main.dev.css": {
+        "static/css/main.css": {
           "media": "screen"
         }
       }
     },
     "skins.theembassy.js": {
       "scripts": [
-        "static/js/vendors.dev.js",
-        "static/js/main.dev.js"
+        "static/js/vendors.js",
+        "static/js/main.js"
       ]
     }
   },

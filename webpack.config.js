@@ -25,8 +25,8 @@ module.exports = (env, argv) => {
         },
         output: {
             path: path.resolve(__dirname, outputFolder),
-            filename: devMode ? 'js/[name].dev.js' : 'js/[name].[chunkhash:8].js',
-            chunkFilename: devMode ? 'js/[name].dev.js' : 'js/[name].[chunkhash:8].js',
+            filename: 'js/[name].js',
+            chunkFilename: 'js/[name].js',
             // Easier navigation in Chrome dev tool source mapping:
             devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/')
         },
@@ -106,8 +106,8 @@ module.exports = (env, argv) => {
             new Dotenv(),
             new CleanWebpackPlugin([
                 // wipe the entire static folder
-                path.resolve(__dirname, 'web/static/js'),
-                path.resolve(__dirname, 'web/static/css'),
+                path.resolve(__dirname, 'static/js'),
+                path.resolve(__dirname, 'static/css'),
             ], {
                 // except of this file
                 exclude: []
@@ -118,7 +118,7 @@ module.exports = (env, argv) => {
             }),
             new MiniCssExtractPlugin({
                 publicPath: '/static/',
-                filename: devMode ? 'css/[name].dev.css' : 'css/[name].[chunkhash:8].css',
+                filename: 'css/[name].css',
             }),
             new ErrorOverlayPlugin()
         ]
