@@ -1,0 +1,43 @@
+{
+  "name": "TheEmbassy",
+  "author": "TheEmbassy",
+  "url": "https://www.mediawiki.org/wiki/Skin:TheEmbassyOfGoodScience",
+  "descriptionmsg": "TheEmbassy-desc",
+  "namemsg": "skinname-theembassy",
+  "license-name": "GPL-2.0+",
+  "type": "skin",
+  "ValidSkinNames": {
+    "theembassy": "TheEmbassy"
+  },
+  "AutoloadClasses": {
+    "SkinTheEmbassy": "TheEmbassy.skin.php",
+    "TheEmbassyTemplate": "TheEmbassyTemplate.php"
+  },
+  "MessagesDirs": {
+    "TheEmbassy": "i18n"
+  },
+  "ResourceModules": {
+    "skins.theembassy": {
+      "class": "ResourceLoaderSkinModule",
+      "styles": {
+        "static/css/main.dev.css": {
+          "media": "screen"
+        }
+      }
+    },
+    "skins.theembassy.js": {
+      "scripts": [
+        "static/js/vendors.dev.js",
+        "static/js/main.dev.js"
+      ]
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "TheEmbassy"
+  },
+  "config": {
+    "VectorUseSimpleSearch": true,
+    "VectorUseIconWatch": true
+  }
+}
