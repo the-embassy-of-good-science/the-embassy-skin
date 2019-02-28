@@ -82,7 +82,7 @@ class TheEmbassyTemplate extends BaseTemplate
             <div class="main-nav">
                 <header>
                     <!-- Momkai logo -->
-                    <img class="logo-momkai" src="/skins/Momkai/static/img/logo-momkai.png" width="37" height="37"/>
+                    <img class="logo-momkai" src="/skins/TheEmbassy/static/images/logo-momkai.png" width="37" height="37"/>
                     <nav>
                         <ul>
                             <?php  $this->renderPortals($this->data['sidebar']); ?>
@@ -93,7 +93,7 @@ class TheEmbassyTemplate extends BaseTemplate
         </div>
 
         <!-- Embassy Logo -->
-        <img class="logo-embassy" src="/skins/Momkai/static/img/logo-embassy.gif" width="270" height="270"/>
+        <img class="logo-embassy" src="/skins/TheEmbassy/static/images/logo-embassy.gif" width="270" height="270"/>
 
         <div id="content" class="mw-body" role="main">
             <a id="top"></a>

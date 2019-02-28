@@ -20,7 +20,7 @@ class SkinTheEmbassy extends SkinTemplate
     public function initPage(OutputPage $out)
     {
         parent::initPage($out);
-        $out->addModules('skins.theembassy.js'); // 'skins.theembassy.js' is the name you used in your skin.json file
+        //$out->addModules('skins.theembassy.js'); // 'skins.theembassy.js' is the name you used in your skin.json file
     }
 
     /**
