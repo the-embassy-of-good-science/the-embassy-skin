@@ -1,3 +1,5 @@
-body {
-    background:red;
-}
+// Base styles
+@import './styles/Base.scss';
+
+// Components
+@import './styles/components/Component.scss';
