@@ -170,3 +170,6 @@ fabric.properties
 # Static files
 static/css/*.css
 static/js/*.js
+
+# Ignore A2 fonts
+static/fonts/A2/
