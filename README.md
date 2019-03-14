@@ -7,6 +7,6 @@
 
 ## MediaWiki Skinning documentation manuals
 
-- [Skin Manuel 1 / 3](https://www.mediawiki.org/wiki/Manual:Skinning_Part_1)
-- [Skin Manuel 2 / 3](https://www.mediawiki.org/wiki/Manual:Skinning_Part_2)
-- [Skin Manuel 3 / 3](https://www.mediawiki.org/wiki/Manual:Skinning_Part_3)
+- [Skin Manual 1 / 3](https://www.mediawiki.org/wiki/Manual:Skinning_Part_1)
+- [Skin Manual 2 / 3](https://www.mediawiki.org/wiki/Manual:Skinning_Part_2)
+- [Skin Manual 3 / 3](https://www.mediawiki.org/wiki/Manual:Skinning_Part_3)
