@@ -165,7 +165,7 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
-
+.idea
 
 # Static files
 static/css/*.css
