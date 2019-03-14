@@ -7,7 +7,7 @@
   "license-name": "GPL-2.0+",
   "type": "skin",
   "ValidSkinNames": {
-    "theembassy": "TheEmbassy"
+    "the-embassy": "TheEmbassy"
   },
   "AutoloadClasses": {
     "SkinTheEmbassy": "TheEmbassy.skin.php",
