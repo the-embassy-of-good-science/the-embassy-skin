@@ -3,7 +3,7 @@
   "author": "TheEmbassy",
   "url": "https://www.mediawiki.org/wiki/Skin:TheEmbassyOfGoodScience",
   "descriptionmsg": "TheEmbassy-desc",
-  "namemsg": "skinname-theembassy",
+  "namemsg": "skinname-the-embassy",
   "license-name": "GPL-2.0+",
   "type": "skin",
   "ValidSkinNames": {
@@ -17,7 +17,7 @@
     "TheEmbassy": "i18n"
   },
   "ResourceModules": {
-    "skins.theembassy": {
+    "skins.the-embassy": {
       "class": "ResourceLoaderSkinModule",
       "styles": {
         "static/css/main.css": {
@@ -25,7 +25,7 @@
         }
       }
     },
-    "skins.theembassy.js": {
+    "skins.the-embassy.js": {
       "scripts": [
         "static/js/vendors.js",
         "static/js/main.js"

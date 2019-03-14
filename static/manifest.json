@@ -1,4 +1,5 @@
 {
   "main.css": "/static/css/main.css",
-  "main.js": "/static/js/main.js"
+  "main.js": "/static/js/main.js",
+  "vendors.js": "/static/js/vendors.js"
 }

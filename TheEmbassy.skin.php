@@ -6,7 +6,7 @@
  */
 class SkinTheEmbassy extends SkinTemplate
 {
-    var $skinname = 'theembassy', $stylename = 'TheEmbassy',
+    var $skinname = 'the-embassy', $stylename = 'TheEmbassy',
         $template = 'TheEmbassyTemplate', $useHeadElement = true;
 
     /**
@@ -33,7 +33,7 @@ class SkinTheEmbassy extends SkinTemplate
         parent::setupSkinUserCss($out);
         $out->addModuleStyles(array(
             //'mediawiki.skinning.interface', // Default mediawiki styles
-            'skins.theembassy' //'skins.theembassy' is the name you used in your skin.json file
+            'skins.the-embassy' //'skins.theembassy' is the name you used in your skin.json file
         ));
     }
 
