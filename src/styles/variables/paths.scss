@@ -1,0 +1,9 @@
+// Static path
+$static-path: '/skins/TheEmbassy/static/';
+
+// Fonts path
+$fonts-path: '#{$static-path}fonts/';
+$font-a2-path: '#{$fonts-path}A2/';
+
+// Static assets paths
+$images-static-path: '#{$static-path}images/';

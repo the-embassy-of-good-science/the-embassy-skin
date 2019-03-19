@@ -1,0 +1,51 @@
+
+
+
+@font-face {
+  font-family: 'iwgyva-regular';
+  src: url('#{$font-a2-path}iwgyvaregular-regular-webfont.woff2') format('woff2'),
+  url('#{$font-a2-path}iwgyvaregular-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iwgyva-semibold';
+  src: url('#{$font-a2-path}iwgyvaregular-semibold-webfont.woff2') format('woff2'),
+  url('#{$font-a2-path}iwgyvaregular-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iwgyva-bold';
+  src: url('#{$font-a2-path}iwgyvaregular-bold-webfont.woff2') format('woff2'),
+  url('#{$font-a2-path}iwgyvaregular-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iwgyva-extrabold';
+  src: url('#{$font-a2-path}iwgyvaregular-extrabold-webfont.woff2') format('woff2'),
+  url('#{$font-a2-path}iwgyvaregular-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'iwgyva-black';
+  src: url('#{$font-a2-path}/iwgyvaregular-black-webfont.woff2') format('woff2'),
+  url('#{$font-a2-path}iwgyvaregular-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-body-text: 'iwgyva-regular', Arial, sans-serif;
+$font-headings: 'iwgyva-black', Arial, sans-serif;
+
+$te-font-regular: 'iwgyva-regular';
+$te-font-semibold: 'iwgyva-semibold';
+$te-font-bold: 'iwgyva-bold';
+$te-font-extrabold: 'iwgyva-extrabold';
+$te-font-black: 'iwgyva-black';

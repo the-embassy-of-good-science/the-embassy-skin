@@ -19,11 +19,9 @@
   "ResourceModules": {
     "skins.the-embassy": {
       "class": "ResourceLoaderSkinModule",
-      "styles": {
-        "static/css/main.css": {
-          "media": "screen"
-        }
-      }
+      "styles": [
+        "static/css/main.css"
+      ]
     },
     "skins.the-embassy.js": {
       "scripts": [
