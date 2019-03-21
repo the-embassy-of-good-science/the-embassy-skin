@@ -1,5 +1,12 @@
-// Base styles
-@import './styles/base.scss';
+// Libraries
+@import '~reset-css/sass/reset';
+@import '~foundation-sites/scss/foundation';
 
-// Components
-@import './styles/components/Component.scss';
+// Base styles
+@import './styles/base';
+
+// Components styles
+// @note: add this in alphabetical order
+@import './styles/components/Footer';
+@import './styles/components/MainMenu';
+@import './styles/components/Sidebar';

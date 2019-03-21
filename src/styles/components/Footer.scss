@@ -1,0 +1,33 @@
+.Footer {
+  position: relative;
+  background-color: $te-black;
+  color: $te-white;
+
+  padding: 0 0 60px;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    height: 300px;
+    width: 100vw;
+    background-color: $te-black;
+    transform: skew(0deg, -2deg);
+    top:-80px;
+    z-index: map-get($te-indexes, small);
+  }
+}
+
+.Footer a {
+  color: $te-white;
+
+  &:hover {
+    color: $te-sunfloweryellow;
+  }
+}
+
+.Footer-wrapper {
+  @include xy-grid-container;
+  position: relative;
+  z-index: map-get($te-indexes, medium);
+}

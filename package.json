@@ -40,5 +40,9 @@
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-manifest-plugin": "^2.0.4"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.5.3",
+    "reset-css": "^4.0.1"
   }
 }

@@ -1,0 +1,221 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: $font-body-text;
+  font-size: 18px;
+  background-color: $te-white;
+  margin: 0;
+
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.5;
+  text-transform: none;
+  font-style: italic;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-headings;
+}
+
+h1 {
+  font-size: rem-calc(64);
+}
+
+h2 {
+  font-size: rem-calc(28);
+}
+
+h3 {
+  font-size: rem-calc(22);
+}
+
+h4 {
+  font-size: rem-calc(20);
+}
+
+/* MainContent */
+.MainContent {
+  @include xy-grid-container;
+  display: flex;
+  padding-bottom: 140px;
+}
+
+.MainContent-body {
+  margin-left: 230px;
+  max-width: 670px;
+  margin-right: 120px;
+}
+
+
+.MainContent-body {
+
+
+  a {
+    color: $te-black;
+    &:hover {
+      color: $te-verylightblue;
+    }
+  }
+
+  p {
+    font-style: normal;
+  }
+
+  h1 {
+    padding-bottom: map-get($te-paddings, medium);
+  }
+
+  h2, h3, h4 {
+    padding-bottom: map-get($te-paddings, small);
+  }
+
+  ul, ol, p {
+    padding-bottom: map-get($te-paddings, large);
+  }
+
+  ul, ol {
+    margin-left: 0;
+  }
+
+  ol {
+    counter-reset: item;
+  }
+  ol li { display: block; }
+  ol li:before {
+    content: counter(item) ".    ";
+    counter-increment: item;
+    color: $te-verylightblue;
+  }
+
+  ul, ol {
+    li {
+      padding-bottom: map-get($te-paddings, small);
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+  }
+
+  ul {
+    margin-left: map_get($te-margins, small);
+    li {
+      list-style-image: url('#{$images-static-path}te-ul-bullet.svg');
+    }
+  }
+
+  // Hacked introduction with blockquote
+  .mw-parser-output {
+    blockquote:first-child p {
+      font-style: italic;
+      font-size: rem-calc(22);
+      max-width: 485px;
+    }
+  }
+
+  // Hide taxonomy
+  #toc {
+    display: none;
+  }
+
+  // Edit selection from content
+  .mw-editsection a {
+    color: $te-sunfloweryellow;
+    text-decoration: none;
+
+    &:hover {
+      color: $te-black;
+      text-decoration: underline;
+    }
+  }
+
+}
+
+
+/* Drodpown menu */
+
+.main-nav {
+
+  .noSelect {
+    user-select: none;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    background: orange;
+    box-shadow: 1px 0 6px #666;
+  }
+
+  nav {
+    // position: relative;
+    height: 100%;
+    // background-color: lime;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    list-style: none;
+    height: 100%;
+    // transition: all 1s ease;
+    padding: 0 20px 0 0;
+  }
+
+  h3 {
+    padding: 0 80px 0 0;
+    margin-bottom: 7px;
+  }
+
+  nav ul > li { // top level menu
+
+    &:hover {
+      padding: 0;
+      background-color: orange;
+      cursor: pointer;
+    }
+  }
+
+  ul li ul { // the nested ul
+    display: none;
+
+    visibility: hidden;
+
+    z-index: 999999;
+    height: 0;
+    width: 100%;
+
+    li {
+      background: orange;
+      padding: 10px;
+      &:hover {
+        padding: 10px;
+        background-color: orange;
+        cursor: pointer;
+      }
+    }
+  }
+
+  ul li:hover > ul {
+    visibility: visible;
+    display: block;
+  }
+
+  .nested-submenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

@@ -1,6 +1,3 @@
-
-
-
 @font-face {
   font-family: 'iwgyva-regular';
   src: url('#{$font-a2-path}iwgyvaregular-regular-webfont.woff2') format('woff2'),
@@ -42,7 +39,7 @@
 }
 
 $font-body-text: 'iwgyva-regular', Arial, sans-serif;
-$font-headings: 'iwgyva-black', Arial, sans-serif;
+$font-headings: 'iwgyva-extrabold', Arial, sans-serif;
 
 $te-font-regular: 'iwgyva-regular';
 $te-font-semibold: 'iwgyva-semibold';

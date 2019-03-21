@@ -1,0 +1,16 @@
+.SideBar {
+  position: relative;
+  flex-grow: 1;
+  background-color: $te-verylightblue;
+
+  &:after {
+    position: absolute;
+    top: -180px;
+    left: 0;
+    width: 120vw;
+    background-color: $te-verylightblue;
+    content: ' ';
+    height: calc(100% + 320px);
+    z-index: -1;
+  }
+}

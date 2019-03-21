@@ -70,11 +70,33 @@ class TheEmbassyTemplate extends BaseTemplate
 
         ?>
 
-
         <div id="mw-page-base" class="noprint"></div>
         <div id="mw-head-base" class="noprint"></div>
 
+        <!-- MainMenu -->
+        <div class="MainMenu">
+            <div class="MainMenu-wrapper">
+                <div class="MainMenu-logo">
+                    <a href="/" class="is-fixed">
+                        <img src="/skins/TheEmbassy/static/images/te-logo.gif" width="70" height="70"/>
+                    </a>
+                </div>
+                <nav class="MainMenu-nav">
+                    <a href="#">home</a>
+                    <a href="#">themes</a>
+                    <a href="#">resources</a>
+                    <a href="#">discussions</a>
+                    <a href="#">training</a>
+                    <a class="is-active" href="http://dev-the-embassy.momkai.com/index.php/Declaration">about</a>
+                </nav>
+                <div class="MainMenu-login">
+                    <a href="#">Login</a>
+                </div>
+            </div>
+        </div>
+        <!-- End MainMenu -->
 
+        <?php /*
         <!-- Menu -->
         <div class="container top-navigation">
 
@@ -82,50 +104,52 @@ class TheEmbassyTemplate extends BaseTemplate
             <div class="main-nav">
                 <header>
                     <!-- Momkai logo -->
-                    <img class="logo-momkai" src="/skins/TheEmbassy/static/images/logo-momkai.png" width="37" height="37"/>
+                    <img class="logo-momkai" src="/skins/TheEmbassy/static/images/logo-momkai.png" width="37"
+                         height="37"/>
                     <nav>
                         <ul>
-                            <?php  $this->renderPortals($this->data['sidebar']); ?>
+                            <?php $this->renderPortals($this->data['sidebar']); ?>
                         </ul>
                     </nav>
                 </header>
             </div>
         </div>
-
         <!-- Embassy Logo -->
         <img class="logo-embassy" src="/skins/TheEmbassy/static/images/logo-embassy.gif" width="270" height="270"/>
+        */ ?>
 
-        <div id="content" class="mw-body" role="main">
-            <a id="top"></a>
 
-            <?php
-            if ($this->data['sitenotice']) {
-                ?>
-                <div id="siteNotice" class="mw-body-content"><?php $this->html('sitenotice') ?></div>
+        <!-- MediaWiki body content -->
+        <div id="content" class="mw-body MainContent" role="main">
+
+            <span id="top"></span>
+
+            <!-- Body content -->
+            <div id="bodyContent" class="mw-body-content MainContent-body">
+
+                <?php if ($this->data['sitenotice']): ?>
+                    <div id="siteNotice" class="mw-body-content"><?php $this->html('sitenotice') ?></div>
+                <?php endif; ?>
+
                 <?php
-            }
-            ?>
-            <?php
-            if (is_callable([$this, 'getIndicators'])) {
-                echo $this->getIndicators();
-            }
-            // Loose comparison with '!=' is intentional, to catch null and false too, but not '0'
-            if ($this->data['title'] != '') {
-                ?>
-                <h1 id="firstHeading" class="firstHeading" lang="<?php $this->text('pageLanguage'); ?>"><?php
-                    $this->html('title')
-                    ?></h1>
-                <?php
-            } ?>
-            <?php $this->html('prebodyhtml') ?>
-            <div id="bodyContent" class="mw-body-content">
-                <?php
-                if ($this->data['isarticle']) {
-                    ?>
-                    <div id="siteSub" class="noprint"><?php $this->msg('tagline') ?></div>
-                    <?php
+
+                if (is_callable([$this, 'getIndicators'])) {
+                    echo $this->getIndicators();
                 }
-                ?>
+
+                /*
+                // Loose comparison with '!=' is intentional, to catch null and false too, but not '0'
+                if ($this->data['title'] != '') : ?>
+                    <h1 id="firstHeading" class="firstHeading"
+                        lang="<?php $this->text('pageLanguage'); ?>"><?php $this->html('title') ?></h1>
+                <?php endif; */ ?>
+
+                <?php $this->html('prebodyhtml') ?>
+
+                <?php /* if ($this->data['isarticle']) : ?>
+                    <div id="siteSub" class="noprint"><?php $this->msg('tagline') ?></div>
+                <?php endif; */ ?>
+
                 <div id="contentSub"<?php $this->html('userlangattributes') ?>><?php
                     $this->html('subtitle')
                     ?></div>
@@ -150,8 +174,11 @@ class TheEmbassyTemplate extends BaseTemplate
                         ?></a><?php $this->msg('comma-separator') ?>
                     <a href="#p-search"><?php $this->msg('jumptosearch') ?></a>
                 </div>
+
+                <?php $this->html('bodycontent'); ?>
+
                 <?php
-                $this->html('bodycontent');
+
 
                 if ($this->data['printfooter']) {
                     ?>
@@ -172,28 +199,44 @@ class TheEmbassyTemplate extends BaseTemplate
                 <div class="visualClear"></div>
                 <?php $this->html('debughtml'); ?>
             </div>
-        </div>
-        <div id="mw-navigation">
-            <h2><?php $this->msg('navigation-heading') ?></h2>
 
-            <div id="mw-head">
-                <?php $this->renderNavigation('PERSONAL'); ?>
-                <div id="left-navigation">
-                    <?php $this->renderNavigation(['NAMESPACES', 'VARIANTS']); ?>
+            <div class="SideBar">
+                {sidebar content}
+            </div>
+
+        </div>
+        <!-- End of MediaWiki content -->
+
+        <!-- Footer -->
+        <div class="Footer">
+            <div class="Footer-wrapper">
+                <!-- Bottom navigation -->
+                <div id="mw-navigation">
+                <h2><?php $this->msg('navigation-heading') ?></h2>
+
+                <div id="mw-head">
+                    <?php $this->renderNavigation('PERSONAL'); ?>
+                    <div id="left-navigation">
+                        <?php $this->renderNavigation(['NAMESPACES', 'VARIANTS']); ?>
+                    </div>
+                    <div id="right-navigation">
+                        <?php $this->renderNavigation(['VIEWS', 'ACTIONS', 'SEARCH']); ?>
+                    </div>
                 </div>
-                <div id="right-navigation">
-                    <?php $this->renderNavigation(['VIEWS', 'ACTIONS', 'SEARCH']); ?>
+                <div id="mw-panel">
+                    <div id="p-logo" role="banner"><a class="mw-wiki-logo" href="<?php
+                        echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])
+                        ?>" <?php
+                        echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo'))
+                        ?>></a></div>
+                    <?php $this->renderPortals($this->data['sidebar']); ?>
                 </div>
             </div>
-            <div id="mw-panel">
-                <div id="p-logo" role="banner"><a class="mw-wiki-logo" href="<?php
-                    echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])
-                    ?>" <?php
-                    echo Xml::expandAttributes(Linker::tooltipAndAccesskeyAttribs('p-logo'))
-                    ?>></a></div>
-                <?php $this->renderPortals($this->data['sidebar']); ?>
             </div>
         </div>
+        <!-- End of Footer -->
+
+        <?php /*
         <h1>Footer</h1>
         <div id="footer" role="contentinfo"<?php $this->html('userlangattributes') ?>>
             <?php
@@ -235,8 +278,8 @@ class TheEmbassyTemplate extends BaseTemplate
             <div style="clear:both"></div>
         </div>
 
-
         <?php $this->printTrail(); ?>
+        */ ?>
 
         </body>
         </html>
@@ -301,37 +344,39 @@ class TheEmbassyTemplate extends BaseTemplate
         $msgObj = wfMessage($msg);
         $labelId = Sanitizer::escapeId("p-$name-label");
         ?>
-<li>
+        <li>
             <a href="#">
-                <h3<?php $this->html('userlangattributes') ?> id='<?php echo $labelId ?>'><?php
+                <h3<?php $this->html('userlangattributes') ?> id='<?php echo $labelId ?>'>
+                    <?php
                     echo htmlspecialchars($msgObj->exists() ? $msgObj->text() : $msg);
-                    ?></h3>
+                    ?>
+                </h3>
             </a>
 
-                <?php
-                if (is_array($content)) {
-                    ?>
-                    <ul>
-                        <?php
-                        foreach ($content as $key => $val) {
-                            echo $this->makeListItem($key, $val);
-                        }
-                        if ($hook !== null) {
-                            // Avoid PHP 7.1 warning
-                            $skin = $this;
-                            Hooks::run($hook, [&$skin, true]);
-                        }
-                        ?>
-                    </ul>
-                    <?php
-                } else {
-                    // Allow raw HTML block to be defined by extensions
-                    echo $content;
-                }
-
-                $this->renderAfterPortlet($name);
+            <?php
+            if (is_array($content)) {
                 ?>
-</li>
+                <ul>
+                    <?php
+                    foreach ($content as $key => $val) {
+                        echo $this->makeListItem($key, $val);
+                    }
+                    if ($hook !== null) {
+                        // Avoid PHP 7.1 warning
+                        $skin = $this;
+                        Hooks::run($hook, [&$skin, true]);
+                    }
+                    ?>
+                </ul>
+                <?php
+            } else {
+                // Allow raw HTML block to be defined by extensions
+                echo $content;
+            }
+
+            $this->renderAfterPortlet($name);
+            ?>
+        </li>
         <?php
     }
 
