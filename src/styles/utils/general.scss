@@ -92,7 +92,7 @@ h4 {
   ol li:before {
     content: counter(item) ".    ";
     counter-increment: item;
-    color: $te-verylightblue;
+    color: $te-lightblue;
   }
 
   ul, ol {

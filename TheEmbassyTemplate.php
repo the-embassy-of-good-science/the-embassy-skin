@@ -90,7 +90,7 @@ class TheEmbassyTemplate extends BaseTemplate
                     <a class="is-active" href="http://dev-the-embassy.momkai.com/index.php/Declaration">about</a>
                 </nav>
                 <div class="MainMenu-login">
-                    <a href="#">Login</a>
+                    <a href="#">login or sign up</a>
                 </div>
             </div>
         </div>

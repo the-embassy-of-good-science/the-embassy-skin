@@ -65,4 +65,16 @@
   margin-left: auto;
 }
 
+.MainMenu-login a {
+  padding-left: 50px;
+  background-image: url("#{$images-static-path}svg/te-login.svg");
+  background-repeat: no-repeat;
+  color: $te-blue;
+  text-decoration: none;
+  font-family: $te-font-bold, Helvetica, sans-serif;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
